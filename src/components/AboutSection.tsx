@@ -33,7 +33,7 @@ const AboutSection: React.FC = () => {
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 bg-blue-50 text-primary text-sm font-medium rounded-full mb-4 animate-fade-in">
-            Est. 1983
+            {t('about.established')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
             {t('about.title')}
@@ -53,15 +53,15 @@ const AboutSection: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-primary">40+</div>
-                <div className="text-gray-600 mt-1">Years Experience</div>
+                <div className="text-gray-600 mt-1">{t('about.years')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-primary">500+</div>
-                <div className="text-gray-600 mt-1">Students</div>
+                <div className="text-gray-600 mt-1">{t('about.students')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-primary">50+</div>
-                <div className="text-gray-600 mt-1">Faculty</div>
+                <div className="text-gray-600 mt-1">{t('about.faculty')}</div>
               </div>
             </div>
           </div>

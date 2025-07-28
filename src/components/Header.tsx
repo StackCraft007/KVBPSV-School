@@ -113,7 +113,7 @@ const Header: React.FC = () => {
               </button>
             </div>
             {/* Admin/User Icon */}
-            <UserCircle
+            {/* <UserCircle
               size={32}
               className="ml-4 cursor-pointer text-primary hover:text-orange-600 transition-colors"
               onClick={() => {
@@ -124,7 +124,7 @@ const Header: React.FC = () => {
                   navigate('/admin/login');
                 }
               }}
-            />
+            /> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -180,7 +180,7 @@ const Header: React.FC = () => {
               </button>
             </div>
             {/* Admin/User Icon for mobile */}
-            <UserCircle
+            {/* <UserCircle
               size={32}
               className="ml-4 cursor-pointer text-primary hover:text-orange-600 transition-colors"
               onClick={() => {
@@ -192,7 +192,7 @@ const Header: React.FC = () => {
                   navigate('/admin/login');
                 }
               }}
-            />
+            /> */}
           </div>
         </div>
       </div>

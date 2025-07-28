@@ -10,37 +10,37 @@ const FacilitiesSection: React.FC = () => {
       icon: <Home size={24} className="text-primary" />,
       title: t('facilities.hostel'),
       description: t('facilities.hostel.text'),
-      image: '/images/facilities/Hostel1.jpg'
+      image: '/images/Hostel Facilites/Hostel1.jpg'
     },
     {
       icon: <Dumbbell size={24} className="text-primary" />,
       title: t('facilities.sports'),
       description: t('facilities.sports.text'),
-      image: '/images/facilities/volleyball.jpeg'
+      image: '/images/Sports/volleyball.jpeg'
     },
     {
       icon: <BookMarked size={24} className="text-primary" />,
       title: t('facilities.library'),
       description: t('facilities.library.text'),
-      image: '/images/facilities/library2.jpg'
+      image: '/images/Library/library-2.jpg'
     },
     {
       icon: <BookOpen size={24} className="text-primary" />,
       title: t('facilities.labs'),
       description: t('facilities.labs.text'),
-      image: '/images/activities/science exhibition 1.jpeg'
+      image: '/images/Science Labs/science-lab-1.jpg'
     },
     {
       icon: <Music size={24} className="text-primary" />,
       title: t('facilities.cultural'),
       description: t('facilities.cultural.text'),
-      image: '/images/activities/dance1.jpeg'
+      image: '/images/Cultural Activities/cultural-activities-1.jpg'
     },
     {
       icon: <Monitor size={24} className="text-primary" />,
       title: t('facilities.computer'),
       description: t('facilities.computer.text'),
-      image: '/images/facilities/complab1.jpg'
+      image: '/images/Computer Labs/1-complab1.jpg'
     },
   ];
 
@@ -58,7 +58,7 @@ const FacilitiesSection: React.FC = () => {
             {t('facilities.subtitle')}
           </h2>
           <p className="text-lg text-gray-600 animate-fade-in animation-delay-100">
-            Our school provides a comprehensive environment for student growth and development
+            {t('facilities.description')}
           </p>
         </div>
 

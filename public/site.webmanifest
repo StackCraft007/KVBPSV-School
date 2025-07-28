@@ -1,0 +1,26 @@
+{
+  "name": "क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय",
+  "short_name": "केव्हीबीपी विद्यालय",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "description": "क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय - उत्कृष्ट द्विभाषिक शिक्षण"
+}

@@ -8,24 +8,18 @@ import AdmissionsSection from '../components/AdmissionsSection';
 import Gallery from '../components/Gallery';
 import NewsSection from '../components/NewsSection';
 import ContactSection from '../components/ContactSection';
+import FoundersSection from '../components/FoundersSection';
+import PrincipalDeskSection from '../components/PrincipalDeskSection';
 import Footer from '../components/Footer';
 import SchoolLoader from '../components/SchoolLoader';
 
 const Index: React.FC = () => {
-  const [galleryLoaded, setGalleryLoaded] = useState(false);
-  const [newsLoaded, setNewsLoaded] = useState(false);
-  const [minTimePassed, setMinTimePassed] = useState(false);
-  const timerStarted = useRef(false);
+  const [showLoader, setShowLoader] = useState(true);
 
-  // Start the 4s timer on first render
+  // Show loader for exactly 3 seconds
   React.useEffect(() => {
-    if (!timerStarted.current) {
-      timerStarted.current = true;
-      setTimeout(() => setMinTimePassed(true), 2000);
-    }
+    setTimeout(() => setShowLoader(false), 3000);
   }, []);
-
-  const showLoader = !minTimePassed || !galleryLoaded || !newsLoaded;
 
   return (
     <LanguageProvider>
@@ -35,10 +29,12 @@ const Index: React.FC = () => {
         <main className="flex-grow">
           <Hero />
           <AboutSection />
+          <FoundersSection />
+          <PrincipalDeskSection />
           <FacilitiesSection />
           <AdmissionsSection />
-          <Gallery onLoaded={() => setGalleryLoaded(true)} />
-          <NewsSection onLoaded={() => setNewsLoaded(true)} />
+          <Gallery />
+          <NewsSection />
           <ContactSection />
         </main>
         <Footer />
