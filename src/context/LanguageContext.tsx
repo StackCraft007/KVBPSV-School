@@ -54,8 +54,8 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'सरस्वती प्रतिष्ठान दधिचिंना प्रणाम संस्था',
   },
   'hero.tagline': {
-    en: 'तमसोमा ज्योतिर्गमय',
-    mr: 'तमसोमा ज्योतिर्गमय',
+    en: '"तमसो मा ज्योतिर्गमय"',
+    mr: '"तमसो मा ज्योतिर्गमय"',
   },
   'hero.subtitle': {
     en: 'Leading bilingual education with excellence in academics and cultural heritage since 1983',
