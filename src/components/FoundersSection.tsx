@@ -57,7 +57,7 @@ const FoundersSection: React.FC = () => {
                 <img
                   src={founder.image}
                   alt={founder.name}
-                  className="w-full h-full object-contain p-2"
+                  className="w-full h-full object-contain  p-2"
                 />
               </div>
               
@@ -65,13 +65,15 @@ const FoundersSection: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-2 text-gray-900">
                   {t(founder.name)}
                 </h3>
-                <p className="text-red-600 font-medium mb-4">
-                  {t(founder.designation)}
-                </p>
+                <p className="text-red-600 text-lg font-medium mb-4">
+  {t(founder.designation)}
+</p>
+
                 
-                <div className="mb-6 text-gray-600">
-                  <p className="mb-1">{t(founder.dates)}</p>
-                </div>
+                <div className="mb-6 text-gray-600 font-semibold">
+  <p className="mb-1">({t(founder.dates)})</p>
+</div>
+
                 
                 <div className="relative">
                   <svg

@@ -14,12 +14,12 @@ const ContactSection: React.FC = () => {
     {
       icon: <Phone size={24} className="text-red-600" />,
       title: t('contact.phone'),
-      content: '+91 020 2223 4567',
+      content: '+91 97671 73929',
     },
     {
       icon: <Mail size={24} className="text-red-600" />,
       title: t('contact.email'),
-      content: 'principal@kvbpsmriti.edu.in',
+      content: 'kvbpsv4502rawadi@gmail.com',
     },
     {
       icon: <Clock size={24} className="text-red-600" />,

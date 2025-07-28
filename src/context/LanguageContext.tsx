@@ -46,16 +46,16 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'येथे आपले स्वागत आहे',
   },
   'hero.campus': {
-    en: 'Krantiveer Vasudev Balvant Phadke Smriti Vidyalay',
-    mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय',
+    en: 'Krantiveer Vasudev Balvant Phadke Smriti Vidyalay &\nJunior College',
+    mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृती विद्यालय व\nज्युनियर कॉलेज',
   },
   'hero.trust': {
     en: 'Saraswati Pratishthan Dadhichinna Pranam Sanstha',
     mr: 'सरस्वती प्रतिष्ठान दधिचिंना प्रणाम संस्था',
   },
   'hero.tagline': {
-    en: '"तमसो मा ज्योतिर्गमय"',
-    mr: '"तमसो मा ज्योतिर्गमय"',
+    en: ' || तमसो मा ज्योतिर्गमय ||',
+    mr: ' || तमसो मा ज्योतिर्गमय ||',
   },
   'hero.subtitle': {
     en: 'Leading bilingual education with excellence in academics and cultural heritage since 1983',
@@ -131,7 +131,7 @@ const translations: Record<string, Record<Language, string>> = {
   },
   'founders.name.2': {
     en: 'Late Balwant Chintaman Joshi',
-    mr: 'कै. बलवंत चिंतामण जोशी',
+    mr: 'कै. बळवंत चिंतामण जोशी',
   },
   'founders.designation.1': {
     en: 'Founding President',
@@ -324,7 +324,7 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'स्वागत संदेश'
   },
   'principal.name': {
-    en: 'Mr. Vijaykumar Wakde',
+    en: 'Shri. Vijaykumar Wakde',
     mr: 'श्री.विजयकुमार वाकडे'
   },
   'principal.designation': {
@@ -332,17 +332,42 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'मुख्यध्यापक'
   },
   'principal.message.part1': {
-    en: 'Welcome to Krantiveer Vasudev Balvant Phadke Smriti Vidyalay, where we believe in nurturing not just students, but future leaders who will carry forward the legacy of our great namesake. Our institution stands as a beacon of holistic education, combining the richness of our cultural heritage with modern educational practices.',
-    mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालयात आपले स्वागत आहे, जिथे आम्ही केवळ विद्यार्थी नव्हे तर भविष्यातील नेते घडवतो जे आमच्या महान नामांकित व्यक्तीचा वारसा पुढे नेतील. आमची संस्था सर्वांगीण शिक्षणाचा दीपस्तंभ म्हणून उभी आहे, जी आमच्या सांस्कृतिक वारशाची समृद्धी आधुनिक शैक्षणिक पद्धतींशी जोडते.'
+    en: 'A school is not merely an educational institution but a university of values. It is here that students\' personalities are shaped, their life values are formed, and they receive the inspiration to walk towards a bright future.',
+    mr: 'शाळा म्हणजे केवळ एक शिक्षणसंस्था नसून ती एक संस्कारांचे विद्यापीठ आहे. येथे विद्यार्थ्यांचे व्यक्तिमत्त्व घडते, त्यांची जीवनमूल्ये निर्माण होतात आणि त्यांना उज्वल भविष्याच्या दिशेने वाटचाल करण्याची प्रेरणा मिळते.'
   },
   'principal.message.part2': {
-    en: 'Our commitment to bilingual education ensures that our students are firmly rooted in their mother tongue while being equally proficient in English, preparing them for global opportunities. We focus on character building, academic excellence, and extra-curricular activities to ensure the all-round development of our students.',
-    mr: 'द्विभाषिक शिक्षणाप्रति आमची बांधिलकी याची खात्री करते की आमचे विद्यार्थी त्यांच्या मातृभाषेत दृढ मुळे असताना इंग्रजीमध्येही तितकेच प्रवीण असतील, त्यांना जागतिक संधींसाठी तयार करतात. आम्ही आमच्या विद्यार्थ्यांच्या सर्वांगीण विकासासाठी चारित्र्य घडवणे, शैक्षणिक उत्कृष्टता आणि अभ्यासेतर उपक्रमांवर लक्ष केंद्रित करतो.'
+    en: 'Our Krantiveer Vasudev Balwant Phadke Smruti Vidyalay has been consistently working for the holistic development of students through quality education, values, sports, and various activities for many years. The dedication of teachers, trust of parents, and determination of students are the true keys to our success.',
+    mr: 'आपल्या क्रांतिवीर वासुदेव बळवंत फडके स्मृती विद्यालय ही संस्था गेल्या अनेक वर्षांपासून गुणवत्तापूर्ण शिक्षण, संस्कार, क्रीडा आणि विविध उपक्रमांतून विद्यार्थ्यांचा सर्वांगीण विकास घडविण्याचे कार्य सातत्याने करीत आहे. शिक्षकांचे समर्पण, पालकांचा विश्वास आणि विद्यार्थ्यांची जिद्द ही आमच्या यशाची खरी गुरुकिल्ली आहे.'
   },
   'principal.message.part3': {
-    en: 'I invite you to explore our school, its rich traditions, and the innovative learning environment we have created. Together, let us embark on this journey of shaping bright futures and creating responsible citizens who will make significant contributions to our society.',
-    mr: 'मी आपल्याला आमची शाळा, तिच्या समृद्ध परंपरा आणि आम्ही निर्माण केलेले नावीन्यपूर्ण शिक्षण वातावरण अनुभवण्यासाठी आमंत्रित करते. चला, आपण एकत्र उज्ज्वल भविष्य घडवण्याच्या आणि जबाबदार नागरिक तयार करण्याच्या या प्रवासात सहभागी होऊ जे आपल्या समाजाला महत्त्वपूर्ण योगदान देतील.'
+    en: 'In today\'s era, bookish knowledge alone is not sufficient; development of value education, social awareness, scientific outlook, and digital skills is essential. We take full care of this in our school. We continuously work to give proper direction to each student\'s latent talents, helping them move forward with confidence.',
+    mr: 'आजच्या युगात फक्त पुस्तकी ज्ञान पुरेसे नाही, तर मूल्यशिक्षण, सामाजिक भान, वैज्ञानिक दृष्टिकोन, आणि डिजिटल कौशल्य यांचाही विकास गरजेचा आहे. आमच्या शाळेत आम्ही याची पुरेपूर काळजी घेतो. प्रत्येक विद्यार्थ्याच्या सुप्त गुणांना वाव देत त्यांना आत्मविश्वासाने पुढे जाण्यासाठी योग्य दिशा देण्याचे कार्य आम्ही सातत्याने करतो.'
   },
+  'principal.message.part4': {
+    en: 'In my vision, a teacher is a lighthouse, students are the bright rays of the future, and the school is the bridge of trust between them.',
+    mr: 'माझ्या दृष्टीने शिक्षक म्हणजे दीपस्तंभ, विद्यार्थी म्हणजे भविष्यातील तेजस्वी किरण, आणि शाळा म्हणजे त्या दोघांमधील विश्वासाचा सेतू.'
+  },
+  'principal.message.part5': {
+    en: 'Many parents, alumni, teachers, and the local community have contributed to the school\'s development. I sincerely thank them all.',
+    mr: 'शाळेच्या विकासासाठी आजपर्यंत अनेक पालक, माजी विद्यार्थी, शिक्षक आणि स्थानिक समाजाने योगदान दिले आहे. त्या सर्वांचे मी मनःपूर्वक आभार मानतो.'
+  },
+  'principal.message.quote': {
+    en: 'Finally, I would say,\n"The success of our students is our satisfaction,\nIn their success, our school shines bright."',
+    mr: 'शेवटी एवढेच म्हणेन की,\n"विद्यार्थ्यांचे यश हेच आमचे समाधान आहे,\nत्यांच्या यशातच आमची शाळा उजळते."'
+  },'principal.signature.name': {
+  en: '- Shri. Vijaykumar Wakade',
+  mr: '- श्री. विजयकुमार वाकडे'
+},
+'principal.signature.designation':{
+  en : 'Principal',
+  mr : 'मुख्याध्यापक'
+},
+'principal.signature.school': {
+  en: 'Krantiveer Vasudev Balwant Phadke Smruti Vidyalay, Rawadi',
+  mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय, रावडी'
+},
+
+
 
   // Founders Section
   'founders.title': {
@@ -388,8 +413,8 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'पत्ता',
   },
   'contact.address.text': {
-    en: 'Krantiveer Vasudev Balvant Phadke Smriti Vidyalay, Rawadi, Bhor, Pune, Maharashtra, India',
-    mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय, रावडी, भोर, पुणे, महाराष्ट्र, भारत',
+  en: 'Krantiveer Vasudev Balwant Phadke School & Jr. College, Cummins Building, Village Ravadi, Post Chirvalgaon, Taluka Bhor, District Pune, 412206',
+    mr: 'क्रांतीवीर वासुदेव बळवंत फडके विद्यालय व ज्यु. कॉलेज कमिन्स भवन, मु. रावडी, पो. चिरवलगांव, ता. भोर, जि. पुणे. ४१२ २०६'
   },
   'contact.phone': {
     en: 'Phone',

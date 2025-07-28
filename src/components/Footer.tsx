@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
 
           {/* Motto and Trust */}
           <div className="mb-4">
-            <span className="block text-base text-gray-300">तमसोमा ज्योतिर्गमय</span>
+            <span className="block text-base text-gray-300">|| तमसो मा ज्योतिर्गमय ||</span>
             <span className="block text-sm text-gray-400">सरस्वती प्रतिष्ठान दधिचिंना प्रणाम संस्था</span>
           </div>
 

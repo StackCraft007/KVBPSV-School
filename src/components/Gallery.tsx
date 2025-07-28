@@ -33,16 +33,16 @@ const galleryData: Album[] = [
     id: "computer-labs",
     title: "Computer Labs",
     images: [
-      "/images/Computer Labs/3-cctv surveillance.jpeg",
       "/images/Computer Labs/1-complab1.jpg",
-      "/images/Computer Labs/2-complab3.jpg"
+      "/images/Computer Labs/2-complab3.jpg",
+      "/images/Computer Labs/3-cctv surveillance.jpeg",
     ]
   },
   {
     id: "hostel",
     title: "Hostel Facilities",
     images: [
-      "/images/Hostel Facilites/Hostel1.jpg"
+      "/images/Hostel Facilites/Hostel2.jpg"  
     ]
   },
   {

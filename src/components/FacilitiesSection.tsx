@@ -10,7 +10,7 @@ const FacilitiesSection: React.FC = () => {
       icon: <Home size={24} className="text-primary" />,
       title: t('facilities.hostel'),
       description: t('facilities.hostel.text'),
-      image: '/images/Hostel Facilites/Hostel1.jpg'
+      image: '/images/Hostel Facilites/Hostel2.jpg'
     },
     {
       icon: <Dumbbell size={24} className="text-primary" />,

@@ -47,21 +47,31 @@ const PrincipalDeskSection: React.FC = () => {
                 </svg>
 
                 <div className="space-y-4">
-                  <p className="text-gray-600 italic">
+                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
                     {t('principal.message.part1')}
                   </p>
-                  <p className="text-gray-600 italic">
+                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
                     {t('principal.message.part2')}
                   </p>
-                  <p className="text-gray-600 italic">
+                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
                     {t('principal.message.part3')}
                   </p>
+                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                    {t('principal.message.part4')}
+                  </p>
+                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                    {t('principal.message.part5')}
+                  </p>
+                  <div className="text-gray-700 italic text-sm md:text-base leading-relaxed">
+                    {t('principal.message.quote')}
+                  </div>
                 </div>
 
-                <div className="mt-8 flex items-center justify-end">
+                <div className="mt-6 flex justify-end">
                   <div className="text-right">
-                    <p className="font-semibold text-gray-900">{t('principal.designation')}</p>
-                    <p className="text-sm text-gray-500">{t('principal.name')}</p>
+                    <p className="text-gray-800 text-lg font-semibold">{t('principal.signature.name')}</p>
+                    <p className="text-gray-700 text-lg">{t('principal.signature.designation')}</p>
+                    <p className="text-gray-600 text-lg mt-1">{t('principal.signature.school')}</p>
                   </div>
                 </div>
               </div>

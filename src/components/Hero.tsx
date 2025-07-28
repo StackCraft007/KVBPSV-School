@@ -22,13 +22,19 @@ const Hero: React.FC = () => {
         <span className="inline-block px-4 py-1.5 bg-orange-50/80 text-primary text-sm font-medium rounded-full mb-4 animate-fade-in">
           {t('hero.welcome')}
         </span>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animation-delay-100 animate-fade-in">
-          <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">{t('hero.campus')}</span>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animation-delay-100 animate-fade-in my-6">
+          <span className="text-orange-600 whitespace-pre-line leading-tight block">
+            {t('hero.campus').split('\n').map((line, index) => (
+              <span key={index} className="block mb-2">
+                {line}
+              </span>
+            ))}
+          </span>
         </h1>
         <p className="text-xl md:text-2xl font-semibold text-orange-100 max-w-xl mx-auto animation-delay-150 animate-fade-in">
           {t('hero.tagline')}
         </p>
-        <p className="text-sm text-orange-200 max-w-xl mx-auto animation-delay-150 animate-fade-in">
+        <p className="text-2xl md:text-3xl lg:text-4xl text-orange-200 max-w-2xl mx-auto mt-4 mb-6 font-semibold animation-delay-150 animate-fade-in">
           {t('hero.trust')}
         </p>
         <p className="text-lg text-orange-200 max-w-xl mx-auto animation-delay-200 animate-fade-in">
