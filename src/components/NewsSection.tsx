@@ -27,7 +27,7 @@ const newsData: News[] = [
     title: "news.science.title",
     description: "news.science.description",
     date: "2025-08-10",
-    image: "/images/Events/event1.jpeg"
+    image: "/images/events/event1.jpeg"
   },
   {
     id: "3",
