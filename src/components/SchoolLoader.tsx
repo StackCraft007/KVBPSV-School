@@ -5,7 +5,7 @@ const SchoolLoader: React.FC = () => (
     <div className="flex flex-col items-center">
       <div className="animate-throb mb-6">
         <img
-          src="/images/logo/Phadke logo photo.jpeg"
+          src="/images/logo/Phadke logo photo.avif"
           alt="Krantiveer Vasudev Balwant Phadke"
           className="h-32 w-32 rounded-full border-4 border-orange-400 shadow-lg"
         />

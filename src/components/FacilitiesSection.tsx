@@ -10,37 +10,37 @@ const FacilitiesSection: React.FC = () => {
       icon: <Home size={24} className="text-primary" />,
       title: t('facilities.hostel'),
       description: t('facilities.hostel.text'),
-      image: '/images/Hostel Facilites/Hostel2.jpg'
+      image: '/images/Hostel Facilites/Hostel2.avif'
     },
     {
       icon: <Dumbbell size={24} className="text-primary" />,
       title: t('facilities.sports'),
       description: t('facilities.sports.text'),
-      image: '/images/Sports/volleyball.jpeg'
+      image: '/images/Sports/volleyball.avif'
     },
     {
       icon: <BookMarked size={24} className="text-primary" />,
       title: t('facilities.library'),
       description: t('facilities.library.text'),
-      image: '/images/Library/library-2.jpg'
+      image: '/images/Library/library-2.avif'
     },
     {
       icon: <BookOpen size={24} className="text-primary" />,
       title: t('facilities.labs'),
       description: t('facilities.labs.text'),
-      image: '/images/Science Labs/science-lab-1.jpg'
+      image: '/images/Science Labs/science-lab-1.avif'
     },
     {
       icon: <Music size={24} className="text-primary" />,
       title: t('facilities.cultural'),
       description: t('facilities.cultural.text'),
-      image: '/images/Cultural Activities/cultural-activities-1.jpg'
+      image: '/images/Cultural Activities/cultural-activities-1.avif'
     },
     {
       icon: <Monitor size={24} className="text-primary" />,
       title: t('facilities.computer'),
       description: t('facilities.computer.text'),
-      image: '/images/Computer Labs/1-complab1.jpg'
+      image: '/images/Computer Labs/1-complab1.avif'
     },
   ];
 

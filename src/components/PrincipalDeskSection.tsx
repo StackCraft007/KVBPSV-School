@@ -23,7 +23,7 @@ const PrincipalDeskSection: React.FC = () => {
               <div className="relative">
                 <div className="w-64 h-auto md:w-80 overflow-hidden rounded-2xl shadow-lg">
                   <img
-                    src="/images/People/Principal.jpg"
+                    src="/images/People/Principal.avif"
                     alt={t('principal.name')}
                     className="w-full h-auto object-contain"
                   />

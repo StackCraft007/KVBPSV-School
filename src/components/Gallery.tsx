@@ -17,74 +17,74 @@ const galleryData: Album[] = [
     id: "school",
     title: "School Campus",
     images: [
-      "/images/School Building/KVBP School img1.jpeg",
-      "/images/School Building/KVBP School img2.jpeg"
+      "/images/School Building/KVBP School img1.avif",
+      "/images/School Building/KVBP School img2.avif"
     ]
   },
   {
     id: "classrooms",
     title: "Classrooms",
     images: [
-      "/images/Classrooms/classroom1.jpeg",
-      "/images/Classrooms/Projector facility.jpeg"
+      "/images/Classrooms/classroom1.avif",
+      "/images/Classrooms/Projector facility.avif"
     ]
   },
   {
     id: "computer-labs",
     title: "Computer Labs",
     images: [
-      "/images/Computer Labs/1-complab1.jpg",
-      "/images/Computer Labs/2-complab3.jpg",
-      "/images/Computer Labs/3-cctv surveillance.jpeg",
+      "/images/Computer Labs/1-complab1.avif",
+      "/images/Computer Labs/2-complab3.avif",
+      "/images/Computer Labs/3-cctv surveillance.avif",
     ]
   },
   {
     id: "hostel",
     title: "Hostel Facilities",
     images: [
-      "/images/Hostel Facilites/Hostel2.jpg"  
+      "/images/Hostel Facilites/Hostel2.avif"  
     ]
   },
   {
     id: "library",
     title: "Library",
     images: [
-      "/images/Library/library-1.jpg",
-      "/images/Library/library-2.jpg"
+      "/images/Library/library-1.avif",
+      "/images/Library/library-2.avif"
     ]
   },
   {
     id: "science-labs",
     title: "Science Labs",
     images: [
-      "/images/Science Labs/science-lab-1.jpg",
-      "/images/Science Labs/science-lab-2.jpg"
+      "/images/Science Labs/science-lab-1.avif",
+      "/images/Science Labs/science-lab-2.avif"
     ]
   },
   {
     id: "sports",
     title: "Sports",
     images: [
-      "/images/Sports/kho-kho.jpeg",
-      "/images/Sports/table-tennis.jpeg",
-      "/images/Sports/volleyball.jpeg"
+      "/images/Sports/kho-kho.avif",
+      "/images/Sports/table-tennis.avif",
+      "/images/Sports/volleyball.avif"
     ]
   },
   {
     id: "science-exhibition",
     title: "Science Exhibition",
     images: [
-      "/images/Science Exhibition/Science_Exhibition.jpg",
-      "/images/Science Exhibition/Science_Exhibition-2.jpg"
+      "/images/Science Exhibition/Science_Exhibition.avif",
+      "/images/Science Exhibition/Science_Exhibition-2.avif"
     ]
   },
   {
     id: "cultural-activities",
     title: "Cultural Activities",
     images: [
-      "/images/Cultural Activities/cultural-activities-1.jpg",
-      "/images/Cultural Activities/cultural-activities-2.jpg",
-      "/images/Cultural Activities/dance2.jpeg"
+      "/images/Cultural Activities/cultural-activities-1.avif",
+      "/images/Cultural Activities/cultural-activities-2.avif",
+      "/images/Cultural Activities/dance2.avif"
     ]
   }
 ];

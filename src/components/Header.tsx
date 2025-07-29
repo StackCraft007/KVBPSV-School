@@ -67,7 +67,7 @@
 //             <a href="#" className="flex items-center">
 //               <div className="h-12 w-12 mr-3 rounded-full overflow-hidden border-2 border-orange-400">
 //                 <img 
-//                   src="/images/logo/Phadke logo photo.jpeg" 
+//                   src="/images/logo/Phadke logo photo.avif" 
 //                   alt="Krantiveer Vasudev Balwant Phadke" 
 //                   className="h-full w-full object-cover"
 //                 />
@@ -270,7 +270,7 @@ const Header: React.FC = () => {
             <a href="#" className="flex items-center">
               <div className="h-12 w-12 mr-3 rounded-full overflow-hidden border-2 border-orange-400">
                 <img 
-                  src="/images/logo/Phadke logo photo.jpeg" 
+                  src="/images/logo/Phadke logo photo.avif" 
                   alt="Krantiveer Vasudev Balwant Phadke" 
                   className="h-full w-full object-cover"
                 />

@@ -20,21 +20,21 @@ const newsData: News[] = [
     title: "news.cultural.title",
     description: "news.cultural.description",
     date: "2025-08-15",
-    image: "/images/Cultural Activities/cultural-activities-2.jpg"
+    image: "/images/Cultural Activities/cultural-activities-2.avif"
   },
   {
     id: "2",
     title: "news.science.title",
     description: "news.science.description",
     date: "2025-08-10",
-    image: "/images/events/event1.jpeg"
+    image: "/images/events/event1.avif"
   },
   {
     id: "3",
     title: "news.sports.title",
     description: "news.sports.description",
     date: "2025-08-05",
-    image: "/images/Sports/kho-kho.jpeg"
+    image: "/images/Sports/kho-kho.avif"
   }
 ];
 

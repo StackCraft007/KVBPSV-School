@@ -17,7 +17,7 @@ const foundersData: Founder[] = [
     designation: "founders.designation.1",
     dates: "founders.dates.1",
     quote: "founder1.quote",
-    image: "/images/People/Founder image -1.jpg"
+    image: "/images/People/Founder image -1.avif"
   },
   {
     id: "2",
@@ -25,7 +25,7 @@ const foundersData: Founder[] = [
     designation: "founders.designation.2",
     dates: "founders.dates.2",
     quote: "founder2.quote",
-    image: "/images/People/Founder image -2.jpg"
+    image: "/images/People/Founder image -2.avif"
   }
 ];
 

@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden text-white"
       style={{
-        backgroundImage: "url('/images/School Building/KVBP School img1.jpeg')",
+        backgroundImage: "url('/images/School Building/KVBP School img1.avif')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
