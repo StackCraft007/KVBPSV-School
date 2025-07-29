@@ -35,7 +35,7 @@ const ContactSection: React.FC = () => {
       
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 bg-orange-50 text-red-600 text-sm font-medium rounded-full mb-4 animate-fade-in">
+          <span className="inline-block px-5 py-1.5 bg-orange-50 text-red-600 text-base font-medium rounded-full mb-4 animate-fade-in">
             {t('contact.title')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">

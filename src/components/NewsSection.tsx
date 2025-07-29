@@ -67,7 +67,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ onLoaded }) => {
     <section id="news" className="py-7 relative overflow-hidden">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 bg-blue-50 text-primary text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-5 py-1.5 bg-blue-50 text-primary text-base font-medium rounded-full mb-4">
             {t('news.title')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
