@@ -68,7 +68,7 @@ const AdmissionsSection: React.FC = () => {
           <p className="text-gray-600 mb-6">{t('admissions.contact')}</p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-red-600 hover:bg-red-700 transition-colors duration-200"
+            className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-red-600 hover:bg-red-700 transition-colors duration-200" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}
           >
             {t('admissions.apply')}
           </a>

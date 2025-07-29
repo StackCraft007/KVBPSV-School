@@ -302,13 +302,13 @@ const Header: React.FC = () => {
           {/* Language Switcher + Hamburger */}
           <div className="flex items-center gap-3">
             {/* Compact Language Toggle */}
-            <div className="flex items-center border border-gray-300 rounded-md text-xs font-semibold bg-transparent opacity-70 hover:opacity-100 transition-opacity duration-200 overflow-hidden">
+            <div className="flex items-center border border-gray-300 rounded-md text-xs font-semibold bg-transparent opacity-70 hover:opacity-100 transition-opacity duration-200 overflow-hidden" >
               <button
                 className={`px-3 py-1 w-10 text-center ${
                   language === 'en'
                     ? 'bg-orange-500 text-white'
                     : 'bg-transparent text-black hover:bg-orange-100'
-                }`}
+                }` } style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}
                 onClick={() => setLanguage('en')}
               >
                 EN

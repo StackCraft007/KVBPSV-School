@@ -35,7 +35,7 @@ const AboutSection: React.FC = () => {
           <span className="inline-block px-5 py-1.5 bg-blue-50 text-primary text-base font-medium rounded-full mb-4 animate-fade-in">
             {t('about.established')}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in" >
             {t('about.title')}
           </h2>
           <p className="text-lg text-gray-600 animate-fade-in animation-delay-100">
