@@ -276,17 +276,9 @@ const Header: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="text-base md:text-lg font-bold text-primary">
-                  क्रांतिवीर वासुदेव बळवंत
-                </span>
-                <span className="text-base md:text-lg font-bold">
-                  फडके स्मृति विद्यालय
-                </span>
-                <span className="text-[10px] md:text-xs text-gray-500 font-medium mt-0.5">
-                  || तमसो मा ज्योतिर्गमय ||
-                </span>
+                <span className="text-sm md:text-xl font-bold text-primary">क्रांतिवीर वासुदेव बळवंत</span>
+                <span className="text-sm md:text-xl font-bold">फडके स्मृति विद्यालय</span>
               </div>
-
             </a>
           </div>
 
