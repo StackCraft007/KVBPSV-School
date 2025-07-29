@@ -8,7 +8,7 @@ const PrincipalDeskSection: React.FC = () => {
     <section id="principal-desk" className="bg-gradient-to-b from-gray-50 to-white">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block px-4 py-1.5 bg-orange-50 text-red-600 text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-5 py-2 bg-orange-50 text-red-600 text-base rounded-full mb-4">            
             {t('principal.subtitle')}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
