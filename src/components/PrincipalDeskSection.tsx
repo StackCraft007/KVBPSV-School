@@ -65,6 +65,9 @@ const PrincipalDeskSection: React.FC = () => {
                   <div className="text-gray-700 italic text-sm md:text-base leading-relaxed">
                     {t('principal.message.quote')}
                   </div>
+                  <div className="text-gray-700 italic text-sm md:text-base leading-relaxed">
+                    {t('principal.message.thanks')}
+                  </div>
                 </div>
 
                 <div className="mt-6 flex justify-end">

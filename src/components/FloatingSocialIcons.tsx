@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaFacebook, 
   FaInstagram,
-  FaUsers
+  FaUsers,
+  FaTimes
 } from 'react-icons/fa';
 
 const socialLinks = [
@@ -49,7 +50,7 @@ const FloatingSocialIcons = () => {
     <AnimatePresence>
       {showIcons && (
         <motion.div
-          className="fixed bottom-8 right-3 z-50"
+          className="fixed bottom-10 right-3 md:right-6 lg:right-8 z-50"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
@@ -61,7 +62,7 @@ const FloatingSocialIcons = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="flex flex-col gap-3 mb-3"
+                className="flex flex-col gap-3 mb-3 items-center"
               >
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -80,7 +81,7 @@ const FloatingSocialIcons = () => {
                       y: 20,
                       transition: { delay: (socialLinks.length - index - 1) * 0.1 } 
                     }}
-                    className={`w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 transition-all duration-300 ${social.color}`}
+                    className={`w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 transition-all duration-300 ${social.color}`}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -101,7 +102,13 @@ const FloatingSocialIcons = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaUsers size={20} />
+            <motion.div
+              initial={false}
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isOpen ? <FaTimes size={20} /> : <FaUsers size={20} />}
+            </motion.div>
           </motion.button>
         </motion.div>
       )}

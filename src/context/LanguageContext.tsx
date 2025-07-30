@@ -168,8 +168,8 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'वसतिगृह',
   },
   'facilities.hostel.text': {
-    en: 'Well-maintained residential facilities for boys and girls with proper supervision and care.',
-    mr: 'मुले आणि मुलींसाठी योग्य देखरेख आणि काळजीसह सुव्यवस्थित निवासी सुविधा.',
+    en: 'Well-maintained residential facilities for boys with proper supervision and care.',
+    mr: 'मुलांसाठी योग्य देखरेख आणि काळजीसह सुव्यवस्थित निवासी सुविधा.',
   },
   'facilities.sports': {
     en: 'Sports',
@@ -354,6 +354,10 @@ const translations: Record<string, Record<Language, string>> = {
   'principal.message.quote': {
     en: 'Finally, I would say,\n"The success of our students is our satisfaction,\nIn their success, our school shines bright."',
     mr: 'शेवटी एवढेच म्हणेन की,\n"विद्यार्थ्यांचे यश हेच आमचे समाधान आहे,\nत्यांच्या यशातच आमची शाळा उजळते."'
+  },
+  'principal.message.thanks': {
+    en: 'Thank you!',
+    mr: 'धन्यवाद!'
   },'principal.signature.name': {
   en: '- Shri. Vijaykumar Wakade',
   mr: '- श्री. विजयकुमार वाकडे'
@@ -366,8 +370,6 @@ const translations: Record<string, Record<Language, string>> = {
   en: 'Krantiveer Vasudev Balwant Phadke Smruti Vidyalay, Rawadi',
   mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय, रावडी'
 },
-
-
 
   // Founders Section
   'founders.title': {
