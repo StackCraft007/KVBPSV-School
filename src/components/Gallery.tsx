@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from '../context/LanguageContext';
 
 interface GalleryProps {
@@ -173,7 +174,7 @@ const Gallery: React.FC<GalleryProps> = ({ onLoaded }) => {
           onClick={closeLightbox}
         >
           <button
-            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-[60]"
             onClick={closeLightbox}
           >
             <X size={32} />
@@ -183,18 +184,25 @@ const Gallery: React.FC<GalleryProps> = ({ onLoaded }) => {
             onClick={e => e.stopPropagation()}
           >
             <button
-              className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/70"
+              className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/70 z-[60]"
               onClick={showPrev}
             >
               <ChevronLeft size={32} />
             </button>
-            <img
-              src={lightbox.album.images[lightbox.index]}
-              alt={lightbox.album.title}
-              className="w-full h-full max-h-[100vh] object-contain bg-black rounded"
-            />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={lightbox.index}
+                src={lightbox.album.images[lightbox.index]}
+                alt={lightbox.album.title}
+                className="w-full h-full max-h-[100vh] object-contain bg-black rounded"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            </AnimatePresence>
             <button
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/70"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/70 z-[60]"
               onClick={showNext}
             >
               <ChevronRight size={32} />
