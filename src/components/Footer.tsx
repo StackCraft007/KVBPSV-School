@@ -8,10 +8,8 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Facebook size={20} />, href: '#', label: 'Facebook' },
-    { icon: <Instagram size={20} />, href: '#', label: 'Instagram' },
-    { icon: <Twitter size={20} />, href: '#', label: 'Twitter' },
-    { icon: <Youtube size={20} />, href: '#', label: 'Youtube' },
+    { icon: <Facebook size={20} />, href: 'https://www.facebook.com/profile.php?id=61578783275403&sk=about_details', label: 'Facebook' },
+    { icon: <Instagram size={20} />, href: 'https://www.instagram.com/kvbp_rawadi/', label: 'Instagram' },
   ];
 
   const quickLinks = [
@@ -69,6 +67,7 @@ const Footer: React.FC = () => {
               {socialLinks.map((social, index) => (
                 <a 
                   key={index}
+                  target="_blank"
                   href={social.href}
                   className="bg-gray-800 p-2 rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:scale-110"
                   aria-label={social.label}

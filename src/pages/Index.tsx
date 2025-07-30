@@ -12,6 +12,7 @@ import FoundersSection from '../components/FoundersSection';
 import PrincipalDeskSection from '../components/PrincipalDeskSection';
 import Footer from '../components/Footer';
 import SchoolLoader from '../components/SchoolLoader';
+import FloatingSocialIcons from '../components/FloatingSocialIcons';
 
 const Index: React.FC = () => {
   const [showLoader, setShowLoader] = useState(true);
@@ -38,6 +39,7 @@ const Index: React.FC = () => {
           <ContactSection />
         </main>
         <Footer />
+        {!showLoader && <FloatingSocialIcons />}
       </div>
     </LanguageProvider>
   );

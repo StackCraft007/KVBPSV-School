@@ -3,17 +3,17 @@
   "short_name": "केव्हीबीपी विद्यालय",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/images/favicon/favicon.png",
       "sizes": "48x48",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logo192.png",
+      "src": "/images/favicon/favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/logo512.png",
+      "src": "/images/favicon/favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
