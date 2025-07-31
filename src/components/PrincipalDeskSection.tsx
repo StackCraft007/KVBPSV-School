@@ -47,27 +47,27 @@ const PrincipalDeskSection: React.FC = () => {
                 </svg>
 
                 <div className="space-y-4">
-                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.part1')}
                   </p>
-                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.part2')}
                   </p>
-                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.part3')}
                   </p>
-                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.part4')}
                   </p>
-                  <p className="text-gray-700 italic mb-4 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.part5')}
                   </p>
-                  <div className="text-gray-700 italic text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.quote')}
-                  </div>
-                  <div className="text-gray-700 italic text-sm md:text-base leading-relaxed">
+                  </p>
+                  <p className="text-gray-700 italic mb-4 text-base md:text-base leading-relaxed">
                     {t('principal.message.thanks')}
-                  </div>
+                  </p>
                 </div>
 
                 <div className="mt-6 flex justify-end">

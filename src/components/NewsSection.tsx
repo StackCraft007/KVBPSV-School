@@ -89,7 +89,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({ onLoaded }) => {
                   onLoad={handleImageLoad}
                 />
                 <div className="absolute top-4 left-4 bg-white py-1 px-3 rounded-full text-sm font-medium flex items-center shadow-sm">
-                  {new Date(news.date).toLocaleDateString()}
+                  {new Date(news.date).toDateString()}
                 </div>
               </div>
               <div className="p-6 flex flex-col h-full">

@@ -96,7 +96,7 @@ const translations: Record<string, Record<Language, string>> = {
     mr: '१९८३ पासून शिक्षणातील उत्कृष्टता',
   },
   'about.description': {
-    en: 'Established on February 17, 1983, our school is dedicated to providing quality education that embraces both Marathi and English languages. Named after the great revolutionary Krantiveer Vasudev Balvant Phadke, we nurture students from standards 5th to 12th following Maharashtra State Board curriculum. Located in the beautiful surroundings of Rawadi, Bhor, Pune, our school also provides hostel facilities for students.',
+    en: 'Established on February 17, 1983, our school is dedicated to providing quality education that embraces both Marathi and English languages. Named after the great revolutionary Krantiveer Vasudev Balvant Phadke, we nurture students from standards 5th to 12th following Maharashtra State Board curriculum. Located in the beautiful surroundings of Ravadi, Bhor, Pune, our school also provides hostel facilities for students.',
     mr: '१७ फेब्रुवारी १९८३ रोजी स्थापित, आमची शाळा मराठी आणि इंग्रजी या दोन्ही भाषांना सामावून घेणारे गुणवत्तापूर्ण शिक्षण देण्यासाठी समर्पित आहे. महान क्रांतिकारक क्रांतिवीर वासुदेव बळवंत फडके यांच्या नावावर, आम्ही इयत्ता ५ वी ते १२ वी पर्यंतच्या विद्यार्थ्यांचे महाराष्ट्र राज्य मंडळाच्या अभ्यासक्रमानुसार संगोपन करतो. रावडी, भोर, पुणे येथील सुंदर परिसरात स्थित, आमची शाळा विद्यार्थ्यांसाठी वसतिगृह सुविधा देखील प्रदान करते.',
   },
   'about.mission': {
@@ -104,8 +104,8 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'आमचे ध्येय',
   },
   'about.mission.text': {
-    en: 'To lead students from darkness to light (तमसोमा ज्योतिर्गमय) through quality education while preserving our cultural heritage.',
-    mr: 'गुणवत्तापूर्ण शिक्षणाद्वारे आपला सांस्कृतिक वारसा जपत विद्यार्थ्यांना अंधारातून प्रकाशाकडे (तमसोमा ज्योतिर्गमय) नेणे.',
+    en: 'To lead students from darkness to light (तमसो मा ज्योतिर्गमय) through quality education while preserving our cultural heritage.',
+    mr: 'गुणवत्तापूर्ण शिक्षणाद्वारे आपला सांस्कृतिक वारसा जपत विद्यार्थ्यांना अंधारातून प्रकाशाकडे (तमसो मा ज्योतिर्गमय) नेणे.',
   },
   'about.vision': {
     en: 'Our Vision',
@@ -325,7 +325,7 @@ const translations: Record<string, Record<Language, string>> = {
   },
   'principal.name': {
     en: 'Shri. Vijaykumar Wakde',
-    mr: 'श्री.विजयकुमार वाकडे'
+    mr: 'श्री. विजयकुमार वाकडे'
   },
   'principal.designation': {
     en: 'Principal',
@@ -367,7 +367,7 @@ const translations: Record<string, Record<Language, string>> = {
   mr : 'मुख्याध्यापक'
 },
 'principal.signature.school': {
-  en: 'Krantiveer Vasudev Balwant Phadke Smruti Vidyalay, Rawadi',
+  en: 'Krantiveer Vasudev Balwant Phadke Smruti Vidyalay, Ravadi',
   mr: 'क्रांतिवीर वासुदेव बळवंत फडके स्मृति विद्यालय, रावडी'
 },
 
@@ -415,8 +415,8 @@ const translations: Record<string, Record<Language, string>> = {
     mr: 'पत्ता',
   },
   'contact.address.text': {
-  en: 'Krantiveer Vasudev Balwant Phadke School & Jr. College, Cummins Building, Village Ravadi, Post Chirvalgaon, Taluka Bhor, District Pune, 412206',
-    mr: 'क्रांतीवीर वासुदेव बळवंत फडके विद्यालय व ज्यु. कॉलेज कमिन्स भवन, मु. रावडी, पो. चिरवलगांव, ता. भोर, जि. पुणे. ४१२ २०६'
+  en: 'Krantiveer Vasudev Balwant Phadke School & Jr. College, Cummins Building, Village Ravadi, Post Chikhalgaon, Taluka Bhor, District Pune, 412206',
+    mr: 'क्रांतीवीर वासुदेव बळवंत फडके विद्यालय व ज्यु. कॉलेज कमिन्स भवन, मु. रावडी, पो. चिखलगाव, ता. भोर, जि. पुणे. ४१२ २०६'
   },
   'contact.phone': {
     en: 'Phone',
