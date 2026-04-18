@@ -1,105 +1,54 @@
 import React, { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Loader2, Play } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from '../context/LanguageContext';
+import { supabase } from "../lib/supabase";
 
 interface GalleryProps {
   onLoaded?: () => void;
 }
 
-interface Album {
+interface GalleryItem {
   id: string;
   title: string;
-  images: string[];
+  url: string;
+  type: 'image' | 'video';
+  album: string;
 }
-
-const galleryData: Album[] = [
-  {
-    id: "school",
-    title: "School Campus",
-    images: [
-      "/images/School Building/KVBP School img1.avif",
-      "/images/School Building/KVBP School img2.avif"
-    ]
-  },
-  {
-    id: "classrooms",
-    title: "Classrooms",
-    images: [
-      "/images/Classrooms/classroom1.avif",
-      "/images/Classrooms/Projector facility.avif"
-    ]
-  },
-  {
-    id: "computer-labs",
-    title: "Computer Labs",
-    images: [
-      "/images/Computer Labs/1-complab1.avif",
-      "/images/Computer Labs/2-complab3.avif",
-      "/images/Computer Labs/3-cctv surveillance.avif",
-    ]
-  },
-  {
-    id: "hostel",
-    title: "Hostel Facilities",
-    images: [
-      "/images/Hostel Facilites/Hostel2.avif"  
-    ]
-  },
-  {
-    id: "library",
-    title: "Library",
-    images: [
-      "/images/Library/library-1.avif",
-      "/images/Library/library-2.avif"
-    ]
-  },
-  {
-    id: "science-labs",
-    title: "Science Labs",
-    images: [
-      "/images/Science Labs/science-lab-1.avif",
-      "/images/Science Labs/science-lab-2.avif"
-    ]
-  },
-  {
-    id: "sports",
-    title: "Sports",
-    images: [
-      "/images/Sports/kho-kho.avif",
-      "/images/Sports/table-tennis.avif",
-      "/images/Sports/volleyball.avif"
-    ]
-  },
-  {
-    id: "science-exhibition",
-    title: "Science Exhibition",
-    images: [
-      "/images/Science Exhibition/Science_Exhibition.avif",
-      "/images/Science Exhibition/Science_Exhibition-2.avif"
-    ]
-  },
-  {
-    id: "cultural-activities",
-    title: "Cultural Activities",
-    images: [
-      "/images/Cultural Activities/cultural-activities-1.avif",
-      "/images/Cultural Activities/cultural-activities-2.avif",
-      "/images/Cultural Activities/dance2.avif"
-    ]
-  }
-];
 
 const Gallery: React.FC<GalleryProps> = ({ onLoaded }) => {
   const { t } = useLanguage();
-  const [lightbox, setLightbox] = useState<{ album: Album; index: number } | null>(null);
+  const [items, setItems] = useState<GalleryItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [lightbox, setLightbox] = useState<{ item: GalleryItem; index: number } | null>(null);
 
   useEffect(() => {
-    if (onLoaded) onLoaded();
+    fetchGallery();
   }, []);
 
-  const openLightbox = (album: Album, index: number) => {
-    setLightbox({ album, index });
+  const fetchGallery = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("gallery_items")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+      if (error) throw error;
+      setItems(data || []);
+    } catch (error) {
+      console.error("Error fetching gallery:", error);
+    } finally {
+      setLoading(false);
+      if (onLoaded) onLoaded();
+    }
+  };
+
+  const getWatermarkedUrl = (url: string, type: 'image' | 'video') => {
+    return url;
+  };
+
+  const openLightbox = (item: GalleryItem, index: number) => {
+    setLightbox({ item, index });
     document.body.style.overflow = "hidden";
   };
 
@@ -110,21 +59,28 @@ const Gallery: React.FC<GalleryProps> = ({ onLoaded }) => {
 
   const showPrev = () => {
     if (!lightbox) return;
-    setLightbox(l => {
-      if (!l) return l;
-      const newIndex = (l.index - 1 + l.album.images.length) % l.album.images.length;
-      return { ...l, index: newIndex };
-    });
+    const newIndex = (lightbox.index - 1 + items.length) % items.length;
+    setLightbox({ item: items[newIndex], index: newIndex });
   };
 
   const showNext = () => {
     if (!lightbox) return;
-    setLightbox(l => {
-      if (!l) return l;
-      const newIndex = (l.index + 1) % l.album.images.length;
-      return { ...l, index: newIndex };
-    });
+    const newIndex = (lightbox.index + 1) % items.length;
+    setLightbox({ item: items[newIndex], index: newIndex });
   };
+
+  // Group items by album
+  const albums = items.reduce((acc: Record<string, GalleryItem[]>, item) => {
+    if (!acc[item.album]) acc[item.album] = [];
+    acc[item.album].push(item);
+    return acc;
+  }, {});
+
+  if (loading) return (
+    <div className="py-20 flex justify-center">
+      <Loader2 className="animate-spin text-orange-600" size={40} />
+    </div>
+  );
 
   return (
     <section id="gallery" className="py-7 relative overflow-hidden bg-gray-50">
@@ -140,76 +96,114 @@ const Gallery: React.FC<GalleryProps> = ({ onLoaded }) => {
             {t('gallery.description')}
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryData.map(album => (
-            <div
-              key={album.id}
-              className="overflow-hidden rounded-xl shadow-md border border-gray-200 group cursor-pointer relative"
-              onClick={() => openLightbox(album, 0)}
-            >
-              <div className="relative">
-                <img
-                  src={album.images[0]}
-                  alt={album.title}
-                  className="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-lg font-semibold px-4 py-2 rounded shadow">
-                    Click to see more images
-                  </span>
+
+        {items.length === 0 ? (
+          <div className="text-center py-10 text-gray-500 italic">
+            No memories uploaded yet.
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.keys(albums).map((albumName) => {
+              const albumItems = albums[albumName];
+              const firstItem = albumItems[0];
+              return (
+                <div
+                  key={albumName}
+                  className="overflow-hidden rounded-xl shadow-md border border-gray-200 group cursor-pointer relative"
+                  onClick={() => openLightbox(firstItem, items.indexOf(firstItem))}
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={getWatermarkedUrl(firstItem.url, firstItem.type)}
+                      alt={firstItem.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    {firstItem.type === 'video' && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                        <Play className="text-white fill-white" size={48} />
+                      </div>
+                    )}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white text-lg font-semibold px-4 py-2 rounded shadow">
+                        View {albumItems.length} {albumItems.length === 1 ? 'item' : 'items'}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                    <p className="text-lg font-medium text-white drop-shadow-md">{albumName}</p>
+                    <p className="text-sm text-gray-300">{firstItem.title}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <p className="text-lg font-medium text-white drop-shadow-md">{album.title}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+              );
+            })}
+          </div>
+        )}
       </div>
+
       {/* Lightbox */}
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm animate-fade-in"
-          onClick={closeLightbox}
-        >
-          <button
-            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-[60]"
+      <AnimatePresence>
+        {lightbox && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md"
             onClick={closeLightbox}
           >
-            <X size={32} />
-          </button>
-          <div
-            className="w-11/12 md:w-4/5 lg:w-2/3 h-auto max-h-[80vh] relative flex items-center justify-center"
-            onClick={e => e.stopPropagation()}
-          >
             <button
-              className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/70 z-[60]"
-              onClick={showPrev}
+              className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-[60] bg-black/40 p-2 rounded-full"
+              onClick={closeLightbox}
             >
-              <ChevronLeft size={32} />
+              <X size={32} />
             </button>
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={lightbox.index}
-                src={lightbox.album.images[lightbox.index]}
-                alt={lightbox.album.title}
-                className="w-full h-full max-h-[100vh] object-contain bg-black rounded"
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-            </AnimatePresence>
-            <button
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/70 z-[60]"
-              onClick={showNext}
+            <div
+              className="w-11/12 h-screen relative flex items-center justify-center p-4 md:p-10"
+              onClick={e => e.stopPropagation()}
             >
-              <ChevronRight size={32} />
-            </button>
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-3 hover:bg-black/70 z-[60] transition-colors"
+                onClick={showPrev}
+              >
+                <ChevronLeft size={32} />
+              </button>
+              
+              <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+                <motion.div
+                  key={lightbox.item.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  className="w-full h-full max-h-[80vh] flex items-center justify-center"
+                >
+                  {lightbox.item.type === 'video' ? (
+                    <video 
+                      src={lightbox.item.url} 
+                      controls 
+                      autoPlay 
+                      className="max-w-full max-h-full rounded shadow-2xl"
+                    />
+                  ) : (
+                      <img
+                        src={getWatermarkedUrl(lightbox.item.url, lightbox.item.type)}
+                        alt={lightbox.item.title}
+                        className="max-w-full max-h-full object-contain rounded shadow-2xl"
+                      />
+                  )}
+                </motion.div>
+                <div className="text-center">
+                  <h3 className="text-white text-xl font-bold">{lightbox.item.title}</h3>
+                  <p className="text-gray-400 text-sm uppercase tracking-widest mt-1">{lightbox.item.album}</p>
+                </div>
+              </div>
+
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/40 rounded-full p-3 hover:bg-black/70 z-[60] transition-colors"
+                onClick={showNext}
+              >
+                <ChevronRight size={32} />
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </section>
   );
 };
