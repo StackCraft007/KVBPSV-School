@@ -5,10 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import SecurityWrapper from "./components/SecurityWrapper";
-import AdminLogin from "./pages/AdminLogin";
-import AdminDashboard from "./pages/AdminDashboard";
-import AdminSignup from "./pages/AdminSignup";
+import SecurityWrapper from "@/components/SecurityWrapper";
+import AdminLogin from "@/pages/AdminLogin";
+import AdminDashboard from "@/pages/AdminDashboard";
+import AdminSignup from "@/pages/AdminSignup";
 
 // Create a client for React Query
 const queryClient = new QueryClient({
